@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html= lang"ja">
+<head>
+	<meta charset="UTF-8">
+<title>ワンクリック詐欺サイト</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+</head>
+<body>
+	<div id="mesbox" class="collapse">
+	    <div class="alert alert-success container">
+	    	<div class="progress progress-striped active">
+	    		<div id="bar" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+	    	</div>
+		<p id="message">写真を撮影しました。</p>
+		</div>
+	</div>
+<div class="jumbotron" style="background: url('images/money.png');background-position: center;">
+	<div class="container">
+    <h1><strong>儲ける方法</strong></h1>
+    <h2><strong>何もせずに月３００万円を稼ぐ方法があります。</strong></h2>
+    <p><strong>そんな夢のような方法教えます。あなたも億万長者になりましょう。</strong></p>
+    <p><a href="#mesbox" onclick="startLoad()" data-toggle="collapse" class="btn btn-primary btn-lg">もっと詳しく</a></p>
+    </div>
+</div>
+<h1 class="text-center">なぜ儲けれるのか？</h1>
+<p class="text-center">こんなうまい話し皆さんあるわけないと思いますよね？</p>
+<hr>
+	<p class="text-muted text-center" >copyright (C)　2022　example.net これはワンクリック詐欺体験用サイトです。</p>
+	<p class="text-muted text-center" ><a href="https://github.com/potato-souma/one-click1">https://github.com/potato-souma/one-click1</a></p>
+	<audio id="camera" preload="auto">
+		<source src="sounds/camera.mp3" type="audio/mp3">
+	</audio>
+<script type="text/javascript">
+	var i = 0;
+	function startLoad(){
+		document.getElementById('camera').play();
+		setInterval('loading()',40);
+		
+	}
+	function loading(){
+		switch (i){
+			case 20: document.getElementById('message').innerHTML = 
+			'写真を送信中...'; break;
+			case 40: document.getElementById('message').innerHTML = 
+			'IPアドレス取得中...'; break;
+			case 60: document.getElementById('message').innerHTML = 
+			'IPアドレスから住所特定中...'; break;
+			case 80: document.getElementById('message').innerHTML = 
+			'端末情報取得中...'; break;
+			case 90: document.getElementById('message').innerHTML = 
+			'情報送信中...'; break;
+			case 100: location.href = 'complete.html'; break;
+		}
+	
+	document.getElementById('bar').style = 'width:' + i + '%';
+	i++;
+    
+    }
+</script>
+</body>
+</html>
